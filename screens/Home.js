@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
 import Title from "../components/Title";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <View>
       <Title />
@@ -12,9 +12,10 @@ const Home = () => {
             uri: "https://iconscout.com/illustration/quiz-show-3864158",
           }}
           style={styles.banner}
+          resizeMode="contain"
         />
       </View>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("Quiz")}>
         <Text>Start</Text>
       </TouchableOpacity>
     </View>
